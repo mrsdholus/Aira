@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' https: data:; style-src 'self'; script-src 'self'" />
+    <title>Aira</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="ambient ambient-one"></div>
+    <div class="ambient ambient-two"></div>
+
+    <header class="browser-chrome">
+      <div class="drag-strip" title="Перетащить окно"></div>
+      <div class="tab-strip" id="tab-strip" role="tablist" aria-label="Вкладки">
+        <button class="new-tab" id="new-tab" aria-label="Новая вкладка" title="Новая вкладка (Ctrl+T)">+</button>
+      </div>
+
+      <div class="toolbar">
+        <nav class="navigation" aria-label="Навигация">
+          <button id="back" class="icon-button" aria-label="Назад" title="Назад">←</button>
+          <button id="forward" class="icon-button" aria-label="Вперёд" title="Вперёд">→</button>
+          <button id="reload" class="icon-button" aria-label="Обновить" title="Обновить">↻</button>
+        </nav>
+
+        <div class="address-area">
+          <form class="address-shell" id="address-form">
+            <span class="security-dot" aria-hidden="true"></span>
+            <input
+              id="address"
+              type="text"
+              autocomplete="off"
+              spellcheck="false"
+              aria-label="Адрес или поисковый запрос"
+              aria-controls="suggestions"
+              aria-expanded="false"
+              placeholder="Введите адрес или найдите что-нибудь"
+            />
+            <span class="brand-mark">Aira</span>
+          </form>
+          <div class="suggestions" id="suggestions" role="listbox" hidden></div>
+        </div>
+
+        <button class="icon-button menu-button" aria-label="Меню" title="Меню (скоро)">•••</button>
+      </div>
+    </header>
+
+    <script src="renderer.js"></script>
+  </body>
+</html>

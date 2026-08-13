@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self'; script-src 'self'" />
+    <title>Новая вкладка</title>
+    <link rel="stylesheet" href="newtab.css" />
+  </head>
+  <body>
+    <div class="glow glow-left"></div>
+    <div class="glow glow-right"></div>
+    <main>
+      <h1 class="logo" aria-label="Aira">Aira</h1>
+      <section class="shortcut-rows" id="shortcut-rows" aria-label="Ярлыки"></section>
+    </main>
+    <dialog id="shortcut-dialog">
+      <form id="shortcut-form">
+        <h2 id="dialog-title">Добавить ярлык</h2>
+        <label>Название<input id="shortcut-name" maxlength="24" required autocomplete="off" /></label>
+        <label>Адрес<input id="shortcut-url" type="text" required autocomplete="off" placeholder="example.com" /></label>
+        <p class="form-error" id="form-error" aria-live="polite"></p>
+        <div class="dialog-actions">
+          <button type="button" class="secondary" id="dialog-cancel">Отмена</button>
+          <button type="submit" class="primary">Сохранить</button>
+        </div>
+      </form>
+    </dialog>
+    <script src="newtab.js"></script>
+  </body>
+</html>
